@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF8F0;
+  color: #4B2E2E;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #F7C6D9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #F3D9E5;
+}
+
+.logo {
+  color: #8B5E3C;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #4B2E2E;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #E89AB0;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 248, 240, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+  color: #8B5E3C;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #4B2E2E;
+}
+
+/* Offer Box */
+.offer-box {
+  background-color: #FFFFFF;
+  margin: 40px auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 900px;
+  border: 2px solid #F3D9E5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.offer-box h3 {
+  color: #8B5E3C;
+  margin-bottom: 15px;
+}
+
+.offer-box p {
+  margin: 10px 0;
+}
+
+/* Home Intro */
+.home-intro {
+  text-align: center;
+  padding: 30px 20px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.home-intro h3 {
+  color: #8B5E3C;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+/* Page Banner */
+.page-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page-banner h2 {
+  color: #8B5E3C;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Menu */
+.menu-category {
+  padding: 20px 40px 40px;
+}
+
+.menu-category h3 {
+  color: #8B5E3C;
+  font-size: 30px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #F3D9E5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.menu-item,
+.order-item,
+.about-box,
+.contact-card {
+  background-color: #FFFFFF;
+  border: 2px solid #F3D9E5;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.menu-item img,
+.order-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background-color: #f8dfe8;
+}
+
+.menu-item h4,
+.order-item h4 {
+  color: #8B5E3C;
+  margin-bottom: 8px;
+}
+
+/* Order */
+.order-section {
+  padding: 20px 40px 40px;
+}
+
+.order-section h3 {
+  color: #8B5E3C;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.order-item input {
+  width: 70px;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #E89AB0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #D97792;
+}
+
+.cart-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cart-section,
+.delivery-form-section,
+.confirmation-section {
+  display: none;
+  background-color: #FFFFFF;
+  margin: 30px auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 900px;
+  border: 2px solid #F3D9E5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.cart-section h3,
+.delivery-form-section h3,
+.confirmation-section h3 {
+  color: #8B5E3C;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#cartItems p {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#deliveryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#deliveryForm input,
+#deliveryForm textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#deliveryForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* About */
+.about-hero {
+  position: relative;
+  text-align: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 248, 240, 0.8);
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.about-hero-text h2 {
+  color: #8B5E3C;
+  font-size: 36px;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px 40px 50px;
+}
+
+.about-box h3 {
+  color: #8B5E3C;
+  margin-bottom: 15px;
+}
+
+/* Contact */
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px 40px 50px;
+}
+
+.contact-card h3 {
+  color: #8B5E3C;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #F7C6D9;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  color: #4B2E2E;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .page-banner h2,
+  .about-hero-text h2 {
+    font-size: 28px;
+  }
+
+  .menu-category,
+  .order-section,
+  .about-boxes,
+  .contact-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

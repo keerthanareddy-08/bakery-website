@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mumma's Little Bakery - Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Mumma's Little Bakery</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner">
+    <h2>Place Your Order</h2>
+    <p>Select your favorite treats and get them delivered fresh!</p>
+  </section>
+
+  <section class="order-section">
+    <h3>Choose Your Items</h3>
+    <div class="order-grid">
+
+      <div class="order-item">
+        <img src=" " alt="Chocolate Truffle Cake">
+        <h4>Chocolate Truffle Cake</h4>
+        <p>₹550</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty1" min="1" value="1">
+        <button onclick="addToCart('Chocolate Truffle Cake', 550, 'qty1')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Red Velvet Cake">
+        <h4>Red Velvet Cake</h4>
+        <p>₹650</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty2" min="1" value="1">
+        <button onclick="addToCart('Red Velvet Cake', 650, 'qty2')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Chocolate Cupcake">
+        <h4>Chocolate Cupcake</h4>
+        <p>₹90</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Chocolate Cupcake', 90, 'qty3')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Choco Chip Cookies">
+        <h4>Choco Chip Cookies</h4>
+        <p>₹150</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty4" min="1" value="1">
+        <button onclick="addToCart('Choco Chip Cookies', 150, 'qty4')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Classic Belgian Waffle">
+        <h4>Classic Belgian Waffle</h4>
+        <p>₹220</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty5" min="1" value="1">
+        <button onclick="addToCart('Classic Belgian Waffle', 220, 'qty5')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Glazed Donut">
+        <h4>Glazed Donut</h4>
+        <p>₹80</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty6" min="1" value="1">
+        <button onclick="addToCart('Glazed Donut', 80, 'qty6')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Tiramisu">
+        <h4>Tiramisu</h4>
+        <p>₹250</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty7" min="1" value="1">
+        <button onclick="addToCart('Tiramisu', 250, 'qty7')">Add to Cart</button>
+      </div>
+
+      <div class="order-item">
+        <img src=" " alt="Garlic Bread">
+        <h4>Garlic Bread</h4>
+        <p>₹120</p>
+        <label>Quantity:</label>
+        <input type="number" id="qty8" min="1" value="1">
+        <button onclick="addToCart('Garlic Bread', 120, 'qty8')">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <div class="cart-button-container">
+      <button id="viewCartBtn" onclick="showCart()">View Cart</button>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-section" id="cartSection">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p id="cartTotal"><strong>Total: ₹0</strong></p>
+  </section>
+
+  <!-- Delivery Form -->
+  <section class="delivery-form-section" id="deliveryFormSection">
+    <h3>Delivery Details</h3>
+    <form id="deliveryForm" onsubmit="placeOrder(event)">
+      <input type="text" id="customerName" placeholder="Enter Your Name" required>
+      <input type="tel" id="phoneNumber" placeholder="Enter Phone Number" required>
+      <textarea id="address" placeholder="Enter Full Delivery Address" required></textarea>
+      <input type="text" id="landmark" placeholder="Enter Landmark" required>
+      <input type="text" id="city" placeholder="Enter City" required>
+      <input type="text" id="pincode" placeholder="Enter Pincode" required>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <!-- Order Confirmation -->
+  <section class="confirmation-section" id="confirmationSection">
+    <h3>🎉 Order Placed Successfully!</h3>
+    <p>Thank you for ordering from Mumma's Little Bakery.</p>
+    <p>Your delicious treats will be delivered in approximately <strong>30-45 minutes</strong>.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Mumma's Little Bakery. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
